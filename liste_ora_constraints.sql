@@ -1,0 +1,4 @@
+SELECT contraintes.table_name,contraintes.constraint_name,contraintes.constraint_type,colonnes.column_name, contraintes.search_condition
+FROM user_constraints contraintes
+JOIN user_cons_columns colonnes ON contraintes.constraint_name = colonnes.constraint_name
+ORDER BY contraintes.table_name, contraintes.constraint_type;
